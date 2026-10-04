@@ -9,6 +9,7 @@
 [ext_resource type="PackedScene" uid="uid://2wjarrouu8sd" path="res://Scenes/Entities/strawberry.tscn" id="6_k8g1k"]
 [ext_resource type="PackedScene" uid="uid://bs6ly4x82rdgd" path="res://Scenes/Entities/finish_flag.tscn" id="8_l7ek2"]
 [ext_resource type="PackedScene" uid="uid://dcaf3vfbk3vgw" path="res://Scenes/Entities/Campfire.tscn" id="9_7rivk"]
+[ext_resource type="PackedScene" path="res://Scenes/UI/speed_meter.tscn" id="10_spdm"]
 
 [sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_mscei"]
 texture = ExtResource("2_t3b1k")
@@ -203,6 +204,9 @@ sources/0 = SubResource("TileSetAtlasSource_mscei")
 [node name="TestLevel" type="Node2D" unique_id=264406711]
 script = ExtResource("1_w244i")
 gameplay_loop = ExtResource("2_slpwm")
+
+[node name="SpeedMeter" parent="." instance=ExtResource("10_spdm")]
+player_path = NodePath("../Entities/Player")
 
 [node name="FinishFlag" parent="." unique_id=661704181 instance=ExtResource("8_l7ek2")]
 unique_name_in_owner = true
